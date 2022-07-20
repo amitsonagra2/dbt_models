@@ -1,8 +1,6 @@
-{{config(materialized='table')}}
+with orders as ( select * from {{ref('stg_orders')}})
 
-with orders as ( select * from {{ref('m_orders')}})
-
-,customers as ( select * from {{ref('m_customers')}})
+,customers as ( select * from {{ref('stg_customers')}})
 
 ,customer_orders as (
 
