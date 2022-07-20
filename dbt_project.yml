@@ -36,5 +36,5 @@ models:
     marts:
       core:
         +materialized:table
-    raw:
+    staging:
       +materialized:view
