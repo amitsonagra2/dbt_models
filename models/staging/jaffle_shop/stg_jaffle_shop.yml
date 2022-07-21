@@ -4,6 +4,7 @@ models:
  - name: stg_orders
    columns:
     - name: order_id
+      description: '{{"order_status"}}'
       tests: 
         - unique
         - not_null
@@ -18,8 +19,10 @@ models:
                 - return_pending
 
  - name: stg_customers
+   description: one unique customer per row 
    columns: 
    - name: customer_id
+     description: primary key of stg_customers
      tests: 
       - unique
       - not_null
