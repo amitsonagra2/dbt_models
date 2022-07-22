@@ -1,3 +1,3 @@
-{%- macro cents_to_dollars()-%}
-amount/100
-{% endmacro%}
+{% macro cents_to_dollars(field)-%}
+{{ field }}/100
+{%- endmacro%}
