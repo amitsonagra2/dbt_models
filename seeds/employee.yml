@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  - name: employee
+    description: adding employee frlag from csv
+    columns:
+       - name: emp_id
+         tests: 
+           - unique
+           - not_null 
+
